@@ -9,8 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VizhakkalRouteImport } from './routes/vizhakkal'
+import { Route as NigalvugalRouteImport } from './routes/nigalvugal'
+import { Route as ArchagarRouteImport } from './routes/archagar'
 import { Route as IndexRouteImport } from './routes/index'
 
+const VizhakkalRoute = VizhakkalRouteImport.update({
+  id: '/vizhakkal',
+  path: '/vizhakkal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NigalvugalRoute = NigalvugalRouteImport.update({
+  id: '/nigalvugal',
+  path: '/nigalvugal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArchagarRoute = ArchagarRouteImport.update({
+  id: '/archagar',
+  path: '/archagar',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +37,61 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/archagar': typeof ArchagarRoute
+  '/nigalvugal': typeof NigalvugalRoute
+  '/vizhakkal': typeof VizhakkalRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/archagar': typeof ArchagarRoute
+  '/nigalvugal': typeof NigalvugalRoute
+  '/vizhakkal': typeof VizhakkalRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/archagar': typeof ArchagarRoute
+  '/nigalvugal': typeof NigalvugalRoute
+  '/vizhakkal': typeof VizhakkalRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/archagar' | '/nigalvugal' | '/vizhakkal'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/archagar' | '/nigalvugal' | '/vizhakkal'
+  id: '__root__' | '/' | '/archagar' | '/nigalvugal' | '/vizhakkal'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ArchagarRoute: typeof ArchagarRoute
+  NigalvugalRoute: typeof NigalvugalRoute
+  VizhakkalRoute: typeof VizhakkalRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/vizhakkal': {
+      id: '/vizhakkal'
+      path: '/vizhakkal'
+      fullPath: '/vizhakkal'
+      preLoaderRoute: typeof VizhakkalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/nigalvugal': {
+      id: '/nigalvugal'
+      path: '/nigalvugal'
+      fullPath: '/nigalvugal'
+      preLoaderRoute: typeof NigalvugalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/archagar': {
+      id: '/archagar'
+      path: '/archagar'
+      fullPath: '/archagar'
+      preLoaderRoute: typeof ArchagarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ArchagarRoute: ArchagarRoute,
+  NigalvugalRoute: NigalvugalRoute,
+  VizhakkalRoute: VizhakkalRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
