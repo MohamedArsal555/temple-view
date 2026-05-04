@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TempleNav, TempleFooter } from "@/components/TempleNav";
-import vizhaImg from "@/assets/vizha.jpg";
+import vizhaImg from "@/assets/festival-alankaram.jpg";
 
 export const Route = createFileRoute("/vizhakkal")({
   head: () => ({
