@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { TempleNav, TempleFooter } from "@/components/TempleNav";
-import heroImg from "@/assets/temple-hero.jpg";
-import muruganImg from "@/assets/murugan-deity.jpg";
-import archanaiImg from "@/assets/archanai.jpg";
-import abhiImg from "@/assets/abhishekam.jpg";
+import heroImg from "@/assets/gopuram.jpg";
+import muruganImg from "@/assets/velayudhar.jpg";
+import archanaiImg from "@/assets/moolavar-utsavar.jpg";
+import abhiImg from "@/assets/festival-alankaram.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
