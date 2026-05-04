@@ -10,8 +10,15 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VizhakkalRouteImport } from './routes/vizhakkal'
+import { Route as VaralaruRouteImport } from './routes/varalaru'
+import { Route as SthalaPuranamRouteImport } from './routes/sthala-puranam'
 import { Route as NigalvugalRouteImport } from './routes/nigalvugal'
+import { Route as NankodaiRouteImport } from './routes/nankodai'
+import { Route as NaatkaattiRouteImport } from './routes/naatkaatti'
+import { Route as DeivangalRouteImport } from './routes/deivangal'
 import { Route as ArchagarRouteImport } from './routes/archagar'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as AalayaAmaippuRouteImport } from './routes/aalaya-amaippu'
 import { Route as IndexRouteImport } from './routes/index'
 
 const VizhakkalRoute = VizhakkalRouteImport.update({
@@ -19,14 +26,49 @@ const VizhakkalRoute = VizhakkalRouteImport.update({
   path: '/vizhakkal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VaralaruRoute = VaralaruRouteImport.update({
+  id: '/varalaru',
+  path: '/varalaru',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SthalaPuranamRoute = SthalaPuranamRouteImport.update({
+  id: '/sthala-puranam',
+  path: '/sthala-puranam',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const NigalvugalRoute = NigalvugalRouteImport.update({
   id: '/nigalvugal',
   path: '/nigalvugal',
   getParentRoute: () => rootRouteImport,
 } as any)
+const NankodaiRoute = NankodaiRouteImport.update({
+  id: '/nankodai',
+  path: '/nankodai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NaatkaattiRoute = NaatkaattiRouteImport.update({
+  id: '/naatkaatti',
+  path: '/naatkaatti',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DeivangalRoute = DeivangalRouteImport.update({
+  id: '/deivangal',
+  path: '/deivangal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ArchagarRoute = ArchagarRouteImport.update({
   id: '/archagar',
   path: '/archagar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AalayaAmaippuRoute = AalayaAmaippuRouteImport.update({
+  id: '/aalaya-amaippu',
+  path: '/aalaya-amaippu',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -37,35 +79,97 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aalaya-amaippu': typeof AalayaAmaippuRoute
+  '/admin': typeof AdminRoute
   '/archagar': typeof ArchagarRoute
+  '/deivangal': typeof DeivangalRoute
+  '/naatkaatti': typeof NaatkaattiRoute
+  '/nankodai': typeof NankodaiRoute
   '/nigalvugal': typeof NigalvugalRoute
+  '/sthala-puranam': typeof SthalaPuranamRoute
+  '/varalaru': typeof VaralaruRoute
   '/vizhakkal': typeof VizhakkalRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aalaya-amaippu': typeof AalayaAmaippuRoute
+  '/admin': typeof AdminRoute
   '/archagar': typeof ArchagarRoute
+  '/deivangal': typeof DeivangalRoute
+  '/naatkaatti': typeof NaatkaattiRoute
+  '/nankodai': typeof NankodaiRoute
   '/nigalvugal': typeof NigalvugalRoute
+  '/sthala-puranam': typeof SthalaPuranamRoute
+  '/varalaru': typeof VaralaruRoute
   '/vizhakkal': typeof VizhakkalRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aalaya-amaippu': typeof AalayaAmaippuRoute
+  '/admin': typeof AdminRoute
   '/archagar': typeof ArchagarRoute
+  '/deivangal': typeof DeivangalRoute
+  '/naatkaatti': typeof NaatkaattiRoute
+  '/nankodai': typeof NankodaiRoute
   '/nigalvugal': typeof NigalvugalRoute
+  '/sthala-puranam': typeof SthalaPuranamRoute
+  '/varalaru': typeof VaralaruRoute
   '/vizhakkal': typeof VizhakkalRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/archagar' | '/nigalvugal' | '/vizhakkal'
+  fullPaths:
+    | '/'
+    | '/aalaya-amaippu'
+    | '/admin'
+    | '/archagar'
+    | '/deivangal'
+    | '/naatkaatti'
+    | '/nankodai'
+    | '/nigalvugal'
+    | '/sthala-puranam'
+    | '/varalaru'
+    | '/vizhakkal'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/archagar' | '/nigalvugal' | '/vizhakkal'
-  id: '__root__' | '/' | '/archagar' | '/nigalvugal' | '/vizhakkal'
+  to:
+    | '/'
+    | '/aalaya-amaippu'
+    | '/admin'
+    | '/archagar'
+    | '/deivangal'
+    | '/naatkaatti'
+    | '/nankodai'
+    | '/nigalvugal'
+    | '/sthala-puranam'
+    | '/varalaru'
+    | '/vizhakkal'
+  id:
+    | '__root__'
+    | '/'
+    | '/aalaya-amaippu'
+    | '/admin'
+    | '/archagar'
+    | '/deivangal'
+    | '/naatkaatti'
+    | '/nankodai'
+    | '/nigalvugal'
+    | '/sthala-puranam'
+    | '/varalaru'
+    | '/vizhakkal'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AalayaAmaippuRoute: typeof AalayaAmaippuRoute
+  AdminRoute: typeof AdminRoute
   ArchagarRoute: typeof ArchagarRoute
+  DeivangalRoute: typeof DeivangalRoute
+  NaatkaattiRoute: typeof NaatkaattiRoute
+  NankodaiRoute: typeof NankodaiRoute
   NigalvugalRoute: typeof NigalvugalRoute
+  SthalaPuranamRoute: typeof SthalaPuranamRoute
+  VaralaruRoute: typeof VaralaruRoute
   VizhakkalRoute: typeof VizhakkalRoute
 }
 
@@ -78,6 +182,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof VizhakkalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/varalaru': {
+      id: '/varalaru'
+      path: '/varalaru'
+      fullPath: '/varalaru'
+      preLoaderRoute: typeof VaralaruRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sthala-puranam': {
+      id: '/sthala-puranam'
+      path: '/sthala-puranam'
+      fullPath: '/sthala-puranam'
+      preLoaderRoute: typeof SthalaPuranamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/nigalvugal': {
       id: '/nigalvugal'
       path: '/nigalvugal'
@@ -85,11 +203,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NigalvugalRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/nankodai': {
+      id: '/nankodai'
+      path: '/nankodai'
+      fullPath: '/nankodai'
+      preLoaderRoute: typeof NankodaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/naatkaatti': {
+      id: '/naatkaatti'
+      path: '/naatkaatti'
+      fullPath: '/naatkaatti'
+      preLoaderRoute: typeof NaatkaattiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/deivangal': {
+      id: '/deivangal'
+      path: '/deivangal'
+      fullPath: '/deivangal'
+      preLoaderRoute: typeof DeivangalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/archagar': {
       id: '/archagar'
       path: '/archagar'
       fullPath: '/archagar'
       preLoaderRoute: typeof ArchagarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aalaya-amaippu': {
+      id: '/aalaya-amaippu'
+      path: '/aalaya-amaippu'
+      fullPath: '/aalaya-amaippu'
+      preLoaderRoute: typeof AalayaAmaippuRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -104,8 +257,15 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AalayaAmaippuRoute: AalayaAmaippuRoute,
+  AdminRoute: AdminRoute,
   ArchagarRoute: ArchagarRoute,
+  DeivangalRoute: DeivangalRoute,
+  NaatkaattiRoute: NaatkaattiRoute,
+  NankodaiRoute: NankodaiRoute,
   NigalvugalRoute: NigalvugalRoute,
+  SthalaPuranamRoute: SthalaPuranamRoute,
+  VaralaruRoute: VaralaruRoute,
   VizhakkalRoute: VizhakkalRoute,
 }
 export const routeTree = rootRouteImport
