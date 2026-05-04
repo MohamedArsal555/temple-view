@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell } from "@/components/TempleNav";
-import hero from "@/assets/sthala-puranam.jpg";
+import hero from "@/assets/sanctum-deities.jpg";
 
 export const Route = createFileRoute("/varalaru")({
   head: () => ({
