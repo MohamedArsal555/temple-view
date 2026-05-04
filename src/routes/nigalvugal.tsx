@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { TempleNav, TempleFooter } from "@/components/TempleNav";
-import nigalvuImg from "@/assets/nigalvu.jpg";
+import nigalvuImg from "@/assets/moolavar-utsavar.jpg";
 
 export const Route = createFileRoute("/nigalvugal")({
   head: () => ({
