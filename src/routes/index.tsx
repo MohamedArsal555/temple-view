@@ -8,8 +8,8 @@ import abhiImg from "@/assets/abhishekam.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "ஸ்ரீ முருகன் கோயில் | Sri Murugan Temple" },
-      { name: "description", content: "ஆறுபடைவீடு மரபில் அமைந்த ஸ்ரீ முருகப்பெருமான் ஆலயம் — வரலாறு, விழாக்கள், அர்ச்சகர், நன்கொடை" },
+      { title: "ஸ்ரீ வள்ளி தேவசேனா சமேத சுப்பிரமணியர் ஆலயம் | இனாம்காரியந்தல்" },
+      { name: "description", content: "ஸ்ரீ வள்ளி தேவசேனா சமேத சுப்பிரமணியர் ஆலயம், இனாம்காரியந்தல், திருவண்ணாமலை மாவட்டம் – 606604. வரலாறு, விழாக்கள், அர்ச்சகர், நன்கொடை." },
     ],
   }),
   component: Index,
@@ -33,16 +33,19 @@ function Index() {
       <TempleNav />
 
       <section className="relative h-[85vh] min-h-[600px] overflow-hidden">
-        <img src={heroImg} alt="ஸ்ரீ முருகன் கோயில்" width={1536} height={768} className="absolute inset-0 w-full h-full object-cover" />
+        <img src={heroImg} alt="ஸ்ரீ வள்ளி தேவசேனா சமேத சுப்பிரமணியர் ஆலயம்" width={1536} height={768} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-maroon-deep/75 via-maroon-deep/40 to-background" />
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
           <div className="text-7xl mb-4 drop-shadow-lg animate-pulse">ௐ</div>
           <p className="font-tamil text-accent text-lg tracking-widest uppercase">வேல் வேல் வெற்றி வேல்</p>
-          <h1 className="font-tamil text-5xl md:text-7xl font-bold text-primary-foreground drop-shadow-2xl mt-2">
-            ஸ்ரீ முருகன் கோயில்
+          <h1 className="font-tamil text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground drop-shadow-2xl mt-2 max-w-5xl leading-tight">
+            ஸ்ரீ வள்ளி தேவசேனா சமேத<br/>சுப்பிரமணியர் ஆலயம்
           </h1>
-          <p className="font-tamil text-xl md:text-2xl text-primary-foreground/90 mt-4 max-w-2xl">
-            ஆறுபடைவீடு மரபில் — வேலாயுத சுவாமியின் தெய்வீக சந்நிதி
+          <p className="font-tamil text-lg md:text-2xl text-accent mt-4 max-w-3xl">
+            இனாம்காரியந்தல் · திருவண்ணாமலை மாவட்டம் – 606604
+          </p>
+          <p className="font-tamil text-base md:text-lg text-primary-foreground/90 mt-2 max-w-2xl">
+            வள்ளி தேவசேனா சமேத வேலாயுத சுவாமியின் தெய்வீக சந்நிதி
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
             <Link to="/nankodai" className="font-tamil px-8 py-3 rounded-full bg-gradient-gold text-maroon-deep font-bold shadow-gold hover:scale-105 transition-transform">

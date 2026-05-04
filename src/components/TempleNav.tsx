@@ -25,8 +25,8 @@ export function TempleNav() {
             <span className="text-primary-foreground text-xl font-display">ௐ</span>
           </div>
           <div className="leading-tight">
-            <div className="font-tamil text-base md:text-lg text-primary font-bold">ஸ்ரீ முருகன் கோயில்</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Sri Murugan Temple</div>
+            <div className="font-tamil text-sm md:text-base text-primary font-bold">ஸ்ரீ வள்ளி தேவசேனா சமேத சுப்பிரமணியர் ஆலயம்</div>
+            <div className="font-tamil text-[11px] text-muted-foreground">இனாம்காரியந்தல், திருவண்ணாமலை மாவட்டம் – 606604</div>
           </div>
         </Link>
 
@@ -82,14 +82,14 @@ export function TempleFooter() {
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8 text-center md:text-left">
         <div>
           <div className="text-5xl mb-3">ௐ</div>
-          <p className="font-tamil text-lg font-bold">ஸ்ரீ முருகன் கோயில்</p>
+          <p className="font-tamil text-base font-bold leading-snug">ஸ்ரீ வள்ளி தேவசேனா சமேத<br/>சுப்பிரமணியர் ஆலயம்</p>
           <p className="text-xs mt-2 opacity-80 tracking-widest uppercase">Vel Vel Vetri Vel</p>
         </div>
         <div className="font-tamil">
           <p className="font-bold mb-2">தொடர்பு</p>
-          <p className="text-sm opacity-90">கோயில் தெரு, தமிழ்நாடு</p>
+          <p className="text-sm opacity-90">இனாம்காரியந்தல்</p>
+          <p className="text-sm opacity-90">திருவண்ணாமலை மாவட்டம் – 606604</p>
           <p className="text-sm opacity-90">+91 98765 43210</p>
-          <p className="text-sm opacity-90">srimurugan@kovil.org</p>
         </div>
         <div className="font-tamil">
           <p className="font-bold mb-2">திறப்பு நேரம்</p>
@@ -97,7 +97,7 @@ export function TempleFooter() {
           <p className="text-sm opacity-90">மாலை: 4:00 - 9:00</p>
         </div>
       </div>
-      <div className="text-center pb-6 text-xs opacity-80 font-tamil">© ஸ்ரீ முருகன் கோயில் — அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை</div>
+      <div className="text-center pb-6 text-xs opacity-80 font-tamil">© ஸ்ரீ வள்ளி தேவசேனா சமேத சுப்பிரமணியர் ஆலயம், இனாம்காரியந்தல் — அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை</div>
     </footer>
   );
 }
